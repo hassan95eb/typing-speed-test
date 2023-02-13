@@ -1,9 +1,18 @@
 header{
     height: 3rem;
-    background-color: #060047;
+    background-color: #3D1766;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .title-header{
-    color: #B3005E;
+    color: #CD0404;
     position:relative;
-    margin-top: auto;
+    line-height: 2.2;
+}
+main{
+    
+}
+.content{
+    background-color: ;
 }
