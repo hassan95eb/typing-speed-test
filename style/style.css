@@ -1,0 +1,9 @@
+header{
+    height: 3rem;
+    background-color: #060047;
+}
+.title-header{
+    color: #B3005E;
+    position:relative;
+    margin-top: auto;
+}
