@@ -1,6 +1,10 @@
 const Cornometer=document.querySelector(".timer");
+const textProject=document.querySelector(".text-project p").innerHTML;
+const textArea=document.querySelector("#text-area");
+const resetBtn=document.querySelector(".reset-btn");
 var Timer=[0,0,0,0];
 var runner=false;
+var myinterval;
 function Standardtimer(time){
     if(time<=9){
         time="0"+time;
@@ -20,8 +24,32 @@ function textTimer(){
     let textAreaLength=document.querySelector("#text-area").value.length;
     if (textAreaLength==0 && !runner){
         runner=true;
-        setInterval(runtimer,10);
+        myinterval=setInterval(runtimer,10);
     }
 }
-var textArea=document.querySelector("#text-area");
+function Mainfunc(){
+    let textEntered=textArea.value;
+    let textProjectSpell=textProject.substring(0,textEntered.length);
+    if(textProject==textEntered){
+        textArea.style.borderColor="green";
+        clearInterval(myinterval);
+    }
+    else if(textEntered==textProjectSpell){
+        textArea.style.borderColor="yellow";
+    }
+    else{
+        textArea.style.borderColor="red";
+    }
+}function reset(){
+    runner=false;
+    textArea.value="";
+    Timer=[0,0,0,0];
+    Cornometer.innerHTML="00:00:00";
+    myinterval=null;
+    textArea.style.borderColor="rgba(0, 0, 0, 0.5)";
+}
+
+
 textArea.addEventListener("keypress",textTimer);
+textArea.addEventListener("keyup",Mainfunc);
+resetBtn.addEventListener("click",reset);

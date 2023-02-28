@@ -5,6 +5,9 @@ header{
     top: 0;
     z-index: 10;
 }
+.content{
+    text-align: justify;
+}
 .title-header{
     color: #fff;
     position:relative;
@@ -22,14 +25,47 @@ main{
 .ipnut-project{
     height: 150px;
     background-color: rgb(247, 248, 208);
-    width: 60%;
-    border: 4px solid rgba(0, 0, 0, 0.5);
+    width: 70%;
+    border: 7px solid  rgba(0, 0, 0, 0.5) ;
 }
+
 .timer{
     font-size: 20px;
     color: #fff;
     border: 1px solid #fff;
     padding: 7px;
     border-radius: 5px;
-    margin-right:23px;
+    font-weight: 700;
+}
+.reset-btn{
+    font-weight: 600;
+}
+
+footer{
+    background-color:#3D0000;
+}
+.image-profile{
+    width: 200px;
+}
+.about-person{
+    text-align: justify;
+}
+.person h2{
+    color:#f7f8d1 ;
+}
+.another-project .title {color:#f7f8d1; font-size: 1.75rem;}
+.social h3{color:#f7f8d1;}
+/* .social-icon{border: 1px solid #f7f8d152;border-radius: 3px;} */
+.social-icon:hover{ background-color:#f7f8d1a9 ;}
+.soon{color:#f7f8d1; font-size: 1.5rem;font-family:serif !important;}
+@media (min-width:992px) {
+    .person{border-right: 1px solid #f7f8d152;}
+    .social{ border-right: 1px solid #f7f8d152;}
+}
+@media(max-width:992px) {
+    .title-header{font-size: 12px;font-weight: 400;}
+    .ipnut-project{width:100%}
+    .text-project{width: 100%;}
+    .person{border-bottom: 1px solid #f7f8d152;}
+    .social{border-bottom: 1px solid #f7f8d152;}
 }
