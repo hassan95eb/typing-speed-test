@@ -7,9 +7,9 @@ header {
   right: 0;
   z-index: 10;
 }
-a{
-    text-decoration: none;
-    color: #fff;
+a {
+  text-decoration: none;
+  color: #fff;
 }
 .content {
   text-align: justify;
@@ -43,6 +43,11 @@ main {
   padding: 7px;
   border-radius: 5px;
   font-weight: 700;
+}
+@media (max-width: 475px) {
+  .timer {
+    font-size: 15px;
+  }
 }
 .reset-btn {
   font-weight: 600;
@@ -93,5 +98,22 @@ footer {
   }
   .social {
     border-bottom: 1px solid #f7f8d152;
+  }
+}
+@media (min-width: 475px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #3d0000;
+  }
+}
+@media (max-width: 475px) {
+  header {
+    background-color: #7e1d1dcc;
+  }
+  .social-icon svg {
+    width: 50px;
   }
 }
